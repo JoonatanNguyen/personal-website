@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      #magic-square {
+        border: solid 1px red;
+        width: 200px;
+        height: 200px;
+        margin: 100px 0 0 100px;
+        transition: transform 1s;
+      }
+      #magic-button {
+        width: 100px;
+        height: 30px;
+        outline: none;
+        background-color: darkgoldenrod;
+        color: white;
+        margin: 50px 0 0 100px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .rotate-first {
+        transform: rotate(45deg);
+      }
+      .rotate-second {
+        transform: rotate(90deg);
+      }
+      .rotate-third {
+        transform: rotate(135deg);
+      }
+      .rotate-fourth {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="magic-square"></div>
+    <button id="magic-button">MAGIC ROTATE</button>
+    <script>
+      var magicSquare = document.getElementById('magic-square');
+      var magicButton = document.getElementById('magic-button');
+
+      magicButton.addEventListener('click', function() {
+        var currentRotation = magicSquare.classList.item(0);
+
+        switch(currentRotation) {
+          case null:
+            magicSquare.classList.add('rotate-first');
+            break;
+          case 'rotate-first':
+            magicSquare.classList.replace('rotate-first', 'rotate-second');
+            break;
+          case 'rotate-second':
+            magicSquare.classList.replace('rotate-second', 'rotate-third');
+            break;
+          case 'rotate-third':
+            magicSquare.classList.replace('rotate-third', 'rotate-fourth');
+            break;
+          default:
+            magicSquare.classList.replace('rotate-fourth', 'rotate-first');
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>

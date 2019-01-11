@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="../Style/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="jquery/jquery-3.3.1.js"></script>
+    <script src="bootstrap-4.1.1-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     -->
+</head>
+<body onload="myFunction()">
+<div id="wrapper">
+  <div id="animated_div">
+    <span id="logo">Minh Nguyen</span>
+    <div id="container">
+      <div id="menu-left">
+        <div id="home">
+          <span class="navigation-name">Home</span>
+        </div>
+        <div id="skills">
+          <span class="navigation-name">Skills</span>
+        </div>
+        <div id="projects">
+          <span class="navigation-name">Projects</span>
+        </div>
+      </div>
+      <div id="center-shape">
+        <div id="diamond-shape" class="rotate-first"></div>
+        <div id="square-shape">
+          <!-- home section -->
+          <div id="home-section">
+            <img src="../Images/Profile_picture.jpg" class="profile-picture">
+            <!-- <h2>Hi! I am Minh Nguyen</h2> -->
+            <h2>
+              <span class="typewrite" data-period="2000" data-type='[ "Hi, Im Minh Nguyen.", "I am a developer.", "I am creative."]'>
+                <span class="wrap"></span>
+              </span>
+            </h2>
+            <p>Student of Lahti University of Applied Sciences</p>
+          </div>
+          <!-- skills section -->
+          <div id="skills-section">
+            <h3>My skills: </h3>
+            <p id="skillList"></p>
+            <form id="frm1" action="/action_page.php">
+              <label>Add your skill:</label>
+              <input id="input" type="text" name="fname">
+              <input type="button" id="button" value="Add">
+            </form>
+          </div>
+          <!-- projects section -->
+          <div id="projects-section">
+            <div class="project-container" id="first-project">
+              <img src="../Images/train_application.jpg" alt="project picture" class="image">
+              <div class="overlay">
+                <div class="project-description">
+                  <h2 class="project-title">TR</h2>
+                  <span class="see-more">Train website application</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-container" id="second-project">
+              <img src="../Images/quiz.jpg" alt="project picture" class="image">
+              <div class="overlay">
+                <div class="project-description">
+                  <h2 class="project-title">Quizznos</h2>
+                  <span class="see-more">Quizz applied for students services at school</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-container" id="third-project">
+              <img src="../Images/UPAY.jpeg" alt="project picture" class="image">
+              <div class="overlay">
+                <div class="project-description">
+                  <h2 class="project-title">UPay</h2>
+                  <span class="see-more">Mobile payment website application</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- gallery section -->
+          <div id="gallery-section">
+            <div id="image" class="image-container">
+              <img src="../Images/lentokone_img.jpg" class="image">
+              <div class="overlay">
+                <div class="project-description">
+                  <h2 class="project-title">My Vacation</h2>
+                  <span class="see-more">Click to see the slideshow</span>
+                </div>
+              </div>
+            </div>
+            <div id="slideShow">
+              <img src="../Images/Florence.jpg" id="image1">
+              <img src="../Images/Italy.jpg" id="image2">
+              <img src="../Images/IMG_9072.JPG" id="image3">
+              <img src="../Images/IMG_9090.JPG" id="image4">
+              <div id="btn-close" class="btn-slide-close">
+                <i class="glyphicon glyphicon-remove"></i>
+              </div>
+              <div id="btn-forward" class="btn-slide-control">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+              </div>
+              <div id="btn-backward" class="btn-slide-control">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+              </div>
+            </div>
+          </div>
+          <!-- contact section -->
+          <div id="contact-section">
+            <form id="contactForm">
+              <p>
+                <label>First Name: </label>
+                <input type="text" id="firstName" placeholder="Your name...">
+              </p>
+              <p>
+                <label>Last Name: </label>
+                <input type="text" id="lastName" placeholder="Your last name...">
+              </p>
+              <p>
+                <label for="gender">Gender: </label>
+                <select id="gender">
+                  <option value="#">Male</option>
+                  <option value="#">Female</option>
+                  <option value="#">Others</option>
+                </select>
+                <label>Age: </label>
+                <input type="number" id="age" placeholder="Your age...">
+              </p>
+              <p>
+                <label>E-mail: </label>
+                <input type="email" id="email" placeholder="Your e-mail address">
+              </p>
+              <p>
+                <label>Website address: </label>
+                <input type="url" id="websiteAddress" placeholder="Your website address">
+              </p>
+              <p>
+                <label>Comment: </label>
+                <textarea rows="5" cols="30"></textarea>
+              </p>
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </form>
+          </div>
+          <!-- resume section -->
+          <div id="resume-section">
+            <div class="resume-title">
+              <img src="../Images/School-icon.png" style="width: 30px; height: 30px">
+              <h2>Education</h2>
+            </div>
+            <div class="education-content">
+              <h4>Tran Dai Ngia High school for the Gifted</h4>
+              <span class="yearOfStudy">2014 - 2017</span>
+              <p>
+                I have completed my high school education with special subject is in English.
+                However, I found my passion in using computer and willing to learn about
+                Information Technology when I go to the university.
+
+              </p>
+            </div>
+            <div class="education-content">
+              <h4>Lahti University of Applied Sciences</h4>
+              <span class="yearOfStudy">2017 - Now</span>
+              <p>
+                Bachelor's degree program in Business Information Technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="menu-right">
+        <div id="gallery">
+          <span class="navigation-name">Gallery</span>
+        </div>
+        <div id="contact">
+          <span class="navigation-name">Contact</span>
+        </div>
+        <div id="resume">
+          <span class="navigation-name">Resume</span>
+        </div>
+      </div>
+      <div id="currentDate"></div>
+    </div>
+  </div>
+</div>
+<script>
+function myFunction() {
+  alert("Page is loaded");
+}
+</script>
+<script src="../JS/main.js"></script>
+<script src="../JS/gallery.js"></script>
+<script src="../JS/home.js"></script>
+</body>
+</html>
