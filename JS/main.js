@@ -192,7 +192,6 @@ function resumeOnClick() {
 
 function onLoadFunction() {
     startTime();
-    alert("Page is loaded");
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
