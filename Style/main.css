@@ -223,6 +223,9 @@ body {
 .navigation-name {
 	display: inline-block;
 	margin-top: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "Lucida Sans Unicode","Lucida Grande", sans-serif;
 }
 /* home section */
 #home-section {
